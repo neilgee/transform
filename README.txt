@@ -25,5 +25,4 @@ The background images used in the Transform Pro theme are free of copyright and 
 LOCALIZATION
 The Transform Pro theme is translation ready.  More information about the translation process can be found here:http://codex.wordpress.org/Translating_WordPress/
 
-SUPPORT
-Please visit http://wpbeaches.com for theme support.
+NO SUPPORT PROVIDED FOR THIS THEME
