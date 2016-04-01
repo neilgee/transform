@@ -1,5 +1,5 @@
-ALTITUDE PRO THEME
-http://my.studiopress.com/themes/altitude/
+TRANSFORM THEME
+https://wpbeaches.com
 
 INSTALL
 1. Upload the Altitude Pro theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
@@ -26,4 +26,4 @@ LOCALIZATION
 The Altitude Pro theme is translation ready.  More information about the translation process can be found here:http://codex.wordpress.org/Translating_WordPress/
 
 SUPPORT
-Please visit http://my.studiopress.com/help/ for theme support.
+Please visit http://wpbeaches.com for theme support.
