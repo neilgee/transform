@@ -2,10 +2,10 @@ TRANSFORM THEME
 https://wpbeaches.com
 
 INSTALL
-1. Upload the Altitude Pro theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
+1. Upload the Transform Pro theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
 2. Go to your WordPress dashboard and select Appearance.
-3. Activate the Altitude Pro theme.
-4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking. To set up the theme like the demo, please visit http://my.studiopress.com/setup/altitude-pro-theme/.
+3. Activate the Transform Pro theme.
+4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking. To set up the theme like the demo, please visit http://my.studiopress.com/setup/Transform-pro-theme/.
 
 WIDGET AREAS
 Primary Sidebar - This is the primary sidebar if you are using the Content/Sidebar or Sidebar/Conent Site Layout option.
@@ -20,10 +20,10 @@ After Entry - This is the widget that appears after the entry on single posts.
 Footer #1 - This is the first column of the footer section.
 
 BACKGROUND IMAGES
-The background images used in the Altitude Pro theme are free of copyright and courtesy of http://www.gratisography.com/.
+The background images used in the Transform Pro theme are free of copyright and courtesy of http://www.gratisography.com/.
 
 LOCALIZATION
-The Altitude Pro theme is translation ready.  More information about the translation process can be found here:http://codex.wordpress.org/Translating_WordPress/
+The Transform Pro theme is translation ready.  More information about the translation process can be found here:http://codex.wordpress.org/Translating_WordPress/
 
 SUPPORT
 Please visit http://wpbeaches.com for theme support.
