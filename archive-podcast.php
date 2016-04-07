@@ -31,9 +31,11 @@ function podcast_archive_loop() {
 	//	remove_action( 'genesis_entry_header', 'genesis_post_info', 5 );
 		do_action( 'genesis_entry_header' );
 
-        if( has_post_thumbnail() ) {
+    if( has_post_thumbnail() ) {
 		the_post_thumbnail('featured-podcast', array('class' => 'alignnone')); //Add in featured image
-        }
+      }
+    //Output the player    
+    echo do_shortcode('[player]');
 
 		printf( '<div %s>', genesis_attr( 'entry-content' ) );
 
