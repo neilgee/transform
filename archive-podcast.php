@@ -32,9 +32,9 @@ function podcast_archive_loop() {
 		do_action( 'genesis_entry_header' );
 
     if( has_post_thumbnail() ) {
-		the_post_thumbnail('featured-podcast', array('class' => 'alignnone')); //Add in featured image
+		the_post_thumbnail('featured-podcast-blog', array('class' => 'alignnone')); //Add in featured image
       }
-    //Output the player    
+    //Output the player
     echo do_shortcode('[player]');
 
 		printf( '<div %s>', genesis_attr( 'entry-content' ) );
