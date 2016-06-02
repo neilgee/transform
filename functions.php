@@ -15,7 +15,7 @@ require_once( get_stylesheet_directory() . '/lib/customize.php' );
 include_once( get_stylesheet_directory() . '/lib/output.php' );
 
 // Add in our Custom Post Type Featured Post
-require( get_stylesheet_directory() . '/includes/class-featured-custom-post-type-widget-registrations.php' ); 
+require( get_stylesheet_directory() . '/includes/class-featured-custom-post-type-widget-registrations.php' );
 
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Transform' );
@@ -464,3 +464,38 @@ function transform_show_featured_image_single_posts() {
 	genesis_image( $image_args );
 }
 add_action( 'genesis_entry_content', 'transform_show_featured_image_single_posts', 4 );
+
+
+// Output Sign Up Box Wherever
+function transform_after_entry () {
+	ob_start();
+	?>
+	<div class="widget-wrap"><div class="enews">
+		<form id="subscribe" action="//brettbarclay.us12.list-manage.com/subscribe/post?u=be05ffe38c9e6322ce09b4931&amp;id=10de237c70" method="post" target="_blank" onsubmit="if ( subbox1.value == 'First Name') { subbox1.value = ''; } if ( subbox2.value == 'Last Name') { subbox2.value = ''; }" name="">
+			<label for="subbox1" class="screenread">First Name</label>
+			<input id="subbox1" class="enews-subbox" value="First Name" onfocus="if ( this.value == 'First Name') { this.value = ''; }" onblur="if ( this.value == '' ) { this.value = 'First Name'; }" name="FNAME" type="text">
+			<label for="subbox" class="screenread">E-Mail Address</label>
+			<input value="E-Mail Address" id="subbox" onfocus="if ( this.value == 'E-Mail Address') { this.value = ''; }" onblur="if ( this.value == '' ) { this.value = 'E-Mail Address'; }" name="EMAIL" required="required" type="email">
+			<input value="Get Instant Access" id="subbutton" type="submit">
+		</form>
+	</div></div>
+
+
+	<?php
+	return ob_get_clean();
+}
+
+add_shortcode( 'after_post', 'transform_after_entry' );
+
+
+
+// Output Lead Page Sign Up
+function transform_lead_page () {
+	ob_start();
+	?>
+<div class="widget-wrap lead-page-pop"><a style="background-color: #ffcc00; color: #333; text-decoration: none; font-family: 'museo-sans', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.4; text-transform:uppercase; padding: 15px 40px; display: inline-block; max-width: 600px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background-position: initial initial; background-repeat: initial initial;" href="https://brettbarclay.leadpages.co/leadbox/14239b173f72a2%3A10f9ecddcf46dc/5648554290839552/" target="_blank">Get Instant Access Now</a><script data-leadbox="14239b173f72a2:10f9ecddcf46dc" data-url="https://brettbarclay.leadpages.co/leadbox/14239b173f72a2%3A10f9ecddcf46dc/5648554290839552/" data-config="%7B%7D" type="text/javascript" src="https://brettbarclay.leadpages.co/leadbox-1463513236.js"></script></div>
+	<?php
+	return ob_get_clean();
+}
+
+add_shortcode( 'transform_lead_page', 'transform_lead_page' );

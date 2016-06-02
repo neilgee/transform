@@ -269,10 +269,10 @@ h4 {
 
 .image-section h4,
 .solid-section h4 {
-	font-size: 16px;
-	font-weight: 700;
-	letter-spacing: 0;
-	text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: 30px;
 }
 
 h5 {
@@ -1085,9 +1085,13 @@ Plugins
 }
 
 .site-inner .enews-widget .widget-title {
-	margin-bottom: 0;
-	text-align: center;
-	padding-bottom: 30px;
+    margin-bottom: 0;
+    text-align: center;
+    padding-bottom: 30px;
+    color: #333;
+    text-transform: none;
+    font-weight: 300;
+    font-size: 30px;
 }
 
 .enews {
@@ -1124,7 +1128,7 @@ Site Header
 }
 
 .featured-section .site-header {
-	background-color: #fff;
+	background-color: rgba(255,255,255, .0);
 }
 
 .site-header.dark {
@@ -1480,9 +1484,7 @@ Content Area
 }
 
 .front-page-1 {
-	position: relative;
-	background-attachment: inherit;
-	background-position: center top;
+	background-position: center bottom;
 }
 
 .front-page-1 .image-section,
@@ -1522,11 +1524,17 @@ Content Area
 
 /* Front Page OptIn
 --------------------------------------------- */
+.front-page-1 {
+	color: #fff;
+}
+
+.front-page-1 .image-section-hero .widget-area {
+	vertical-align: top;
+}
 
 .front-page-1 h2{
 	margin-bottom: 45px;
 	font-size: 50px;
-	text-transform: capitalize;
 }
 
 .front-page-1 h3 {
@@ -1549,7 +1557,7 @@ Content Area
 
 .front-page-1 .widget-area {
 	padding-bottom: 30px;
-	padding-top: 75px;
+	padding-top: 130px;
 }
 .front-page-1 .enews-widget {
 	padding-top: 5px;
@@ -1601,10 +1609,29 @@ Content Area
 	text-align: center;
 }
 
-.front-page-1 h2,
-.front-page-1 h3 {
-	text-align: left;
+.front-page-1 button {
+	background-color: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+	text-transform: none;
+	padding: 10px 20px;
+	font-size: 18px;
+	box-shadow: 1px 2px 3px #999;
+	letter-spacing: 0;
 }
+
+.front-page-1 button:hover {
+	background-color: #ffcc00;
+	color: #000;
+	border: 1px solid #ffcc00;
+	box-shadow: none;
+}
+
+.hero-line {
+	padding: 80px 0;
+}
+
+
 
 /* Front Page 2 Panel Essence
 --------------------------------------------- */
@@ -2361,7 +2388,259 @@ Landing Page
     text-align: left;
 }
 
+/*
+LMS
+---------------------------------------------------------------------------------------------------- */
+.site-container ul.lms-list-items ul.children {
+margin:0;
+}
 
+.site-container ul.lms-list-items li a {
+padding:30px 15px;
+border-top:1px solid #f5f5f5;
+border-bottom:1px solid #f5f5f5;
+}
+
+.site-container ul.lms-list-items ul.children:before {
+border-left:none;
+}
+
+.site-container ul.lms-list-items {
+border:2px solid #f5f5f5;
+border-radius:3px;
+}
+
+.site-container ul.lms-list-items li.current_courseware_item > a {
+font-weight:bold;
+color:#ffcc00;
+background:#f5f5f5;
+}
+
+.site-container ul.lms-list-items .courseware_item span + em {
+display:none;
+}
+
+.site-container ul.lms-list-items .current_courseware_ancestor > a {
+background:#f5f5f5;
+font-size:19px;
+}
+
+.site-container ul.lms-list-items li a .lms-item-complete:before {
+content:' \f3fe';
+font-family:'ionicons';
+font-size:23px;
+margin-right:5px;
+margin-top:-4px;
+line-height:1;
+color:#ffcc00;
+font-weight:700;
+float:left;
+}
+
+.site-container ul.lms-list-items li a .lms-item-favorite:before {
+color:#ffcc00;
+font-size:16px;
+margin-top:2px;
+font-weight:700;
+}
+
+.site-container .courseware_item span small,.entry-header small {
+display:block;
+margin-bottom:10px;
+text-transform:uppercase;
+color:#5d5d5d;
+}
+
+.lms_courseware .entry-header small {
+font-size:30px;
+}
+
+.site-container .courseware_item span small:hover {
+color:#5d5d5d;
+}
+
+/*
+Lead Page
+---------------------------------------------------------------------------------------------------- */
+.lead-page-pop > a:after {
+	content:' \f0ed';
+	font-family: 'fontawesome';
+	font-size: 25px;
+	line-height: 1.8;
+	vertical-align: middle;
+}
+
+
+
+
+/*
+Podcast archive
+---------------------------------------------------------------------------------------------------- */
+
+.site-container .rm-player .rm-player-image {
+display:none
+}
+
+.rm-podcast .buttons {
+float:left
+}
+
+.site-container .rm-podcast footer {
+margin-bottom:30px
+}
+
+
+/*
+Checkout Essence Page
+---------------------------------------------------------------------------------------------------- */
+
+.checkout .entry-title {
+text-align:center
+}
+
+.checkout .sidebar .widget {
+margin-bottom:60px
+}
+
+.checkout .sidebar .widget-title {
+font-size:27px;
+border-bottom:1px dotted #333;
+display:inline-block
+}
+
+.checkout .sidebar {
+font-size:17px;
+text-align:center;
+padding:2%;
+box-shadow:inset 0 0 5px #999;
+border-radius:3px
+}
+
+.checkout .booklist {
+margin-bottom:0
+}
+
+.widget .course-testimonials li {
+clear:both;
+margin-bottom:20px;
+text-align:left
+}
+
+.course-testimonials img {
+float:left;
+max-width:100px;
+margin-right:10px;
+margin-bottom:90px
+}
+
+.checkout-img {
+box-shadow:1px 1px 5px #bbb
+}
+
+.login-compact {
+margin-top:20px
+}
+
+.premise-checkout-wrap {
+background:#f5f5f5;
+padding:5%;
+border:1px solid #ddd;
+border-radius:3px
+}
+
+.premise-checkout-wrap .accesspress-checkout-heading {
+text-align:center
+}
+
+.premise-checkout-wrap .accesspress-checkout-form-payment-method {
+margin:0 auto;
+width:460px;
+padding-top:5%
+}
+
+.site-container .premise-checkout-wrap .accesspress-checkout-payment-method-wrap {
+display:inline-block
+}
+
+.site-container .premise-checkout-wrap .accesspress-checkout-payment-method-wrap label {
+display:inline-block;
+height:50px;
+margin:0;
+text-align:left;
+text-indent:-9999px;
+width:100%!important
+}
+
+.premise-checkout-wrap .accesspress-checkout-payment-method-stripe-wrap {
+margin-right:50px;
+width:280px!important
+}
+
+.premise-checkout-wrap .accesspress-checkout-payment-method-paypal-wrap {
+width:120px!important
+}
+
+.premise-checkout-wrap .accesspress-checkout-payment-method-stripe-wrap label {
+background-image:url(/wp-content/uploads/2016/05/cc.png);
+background-repeat:no-repeat;
+background-position:33px 5px;
+text-align:left
+}
+
+.premise-checkout-wrap .accesspress-checkout-payment-method-paypal-wrap label {
+background-image:url(/wp-content/uploads/2016/05/paypal.png);
+background-repeat:no-repeat;
+background-position:33px 5px;
+text-align:left
+}
+
+.form-box .premise-checkout-wrap .accesspress-checkout-form-row input {
+text-align:left;
+width:50%
+}
+
+.premise-checkout-wrap .accesspress-checkout-payment-method-wrap input {
+margin-top:18px;
+margin-right:20px!important;
+position:absolute;
+width:20px!important
+}
+
+.guarantee {
+text-align:center;
+font-size:17px
+}
+
+.checkout .title-area {
+float:none;
+padding:25px 0;
+width:100%;
+text-align:center
+}
+
+.checkout .nav-primary,.checkout .nav-footer,.checkout .footer-tab {
+text-align:center;
+display:none
+}
+
+.checkout .site-inner {
+margin-top:50px
+}
+
+.checkout .site-header {
+position:relative
+}
+
+.checkout-price {
+text-align:left;
+color:#999;
+padding-left:20px
+}
+
+/*Landing Page */
+.transform-custom {
+font-family:'museo-sans',sans-serif
+}
 
 /*
 Media Queries
@@ -2575,10 +2854,6 @@ Media Queries
 	    text-align: center;
 	}
 
-	.front-page-1 .image-section-hero {
-	    padding-top: 0;
-	}
-
 	.front-page-1 ul li {
 		font-size: 16px;
 	}
@@ -2642,7 +2917,7 @@ Media Queries
 		border: none;
 		display: block;
 		padding: 10px 0;
-		text-transform: none;
+		text-transform: uppercase;
 		font-size: 16px;
 	}
 
