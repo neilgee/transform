@@ -1557,7 +1557,7 @@ Content Area
 
 .front-page-1 .widget-area {
 	padding-bottom: 30px;
-	padding-top: 130px;
+	padding-top: 80px;
 }
 .front-page-1 .enews-widget {
 	padding-top: 5px;
@@ -1616,7 +1616,6 @@ Content Area
 	text-transform: none;
 	padding: 10px 20px;
 	font-size: 18px;
-	box-shadow: 1px 2px 3px #999;
 	letter-spacing: 0;
 }
 
