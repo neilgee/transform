@@ -470,7 +470,8 @@ add_action( 'genesis_entry_content', 'transform_show_featured_image_single_posts
 function transform_after_entry () {
 	ob_start();
 	?>
-	<div class="widget-wrap"><div class="enews">
+	<div class="widget-wrap"><div class="enews enews-widget">
+		<h3 class="widgettitle widget-title">Exclusive Membership Content</h3>
 		<form id="subscribe" action="//brettbarclay.us12.list-manage.com/subscribe/post?u=be05ffe38c9e6322ce09b4931&amp;id=10de237c70" method="post" target="_blank" onsubmit="if ( subbox1.value == 'First Name') { subbox1.value = ''; } if ( subbox2.value == 'Last Name') { subbox2.value = ''; }" name="">
 			<label for="subbox1" class="screenread">First Name</label>
 			<input id="subbox1" class="enews-subbox" value="First Name" onfocus="if ( this.value == 'First Name') { this.value = ''; }" onblur="if ( this.value == '' ) { this.value = 'First Name'; }" name="FNAME" type="text">

@@ -250,7 +250,7 @@ h2 {
 
 .image-section h2,
 .solid-section h2 {
-	font-size: 80px;
+	font-size: 50px;
 	font-weight: 300;
 	line-height: 1;
 }
@@ -1147,6 +1147,16 @@ Site Header
 	top: 32px;
 }
 
+.home .site-header .nav-primary,
+.home .site-header .title-area  {
+opacity:0
+}
+
+.home .dark .nav-primary,
+.home .dark .title-area  {
+opacity:1
+}
+
 /* Title Area
 --------------------------------------------- */
 
@@ -1353,11 +1363,14 @@ Site Navigation
 }
 
 .nav-footer .genesis-nav-menu a {
-	border: none;
-	font-weight: 700;
-	letter-spacing: 3px;
-	margin: 0 20px;
-	padding: 0;
+    border: none;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    padding: 0;
+    font-size: 14px;
+    color: #eee;
+		-webkit-font-smoothing: antialiased;
 }
 
 /* Responsive Menu
@@ -2319,6 +2332,7 @@ Site Footer
 	background-color: #aaa;
 	padding: 10px;
 	text-align: center;
+	-webkit-font-smoothing: antialiased;
 }
 
 .site-footer,
@@ -2390,41 +2404,41 @@ Landing Page
 /*
 LMS
 ---------------------------------------------------------------------------------------------------- */
-.site-container ul.lms-list-items ul.children {
+.single-lms_courseware .site-container ul.lms-list-items ul.children {
 margin:0;
 }
 
-.site-container ul.lms-list-items li a {
+.single-lms_courseware .site-container ul.lms-list-items li a {
 padding:30px 15px;
 border-top:1px solid #f5f5f5;
 border-bottom:1px solid #f5f5f5;
 }
 
-.site-container ul.lms-list-items ul.children:before {
+.single-lms_courseware .site-container ul.lms-list-items ul.children:before {
 border-left:none;
 }
 
-.site-container ul.lms-list-items {
+.single-lms_courseware .site-container ul.lms-list-items {
 border:2px solid #f5f5f5;
 border-radius:3px;
 }
 
-.site-container ul.lms-list-items li.current_courseware_item > a {
+.single-lms_courseware .site-container ul.lms-list-items li.current_courseware_item > a {
 font-weight:bold;
 color:#ffcc00;
 background:#f5f5f5;
 }
 
-.site-container ul.lms-list-items .courseware_item span + em {
+.single-lms_courseware .site-container ul.lms-list-items .courseware_item span + em {
 display:none;
 }
 
-.site-container ul.lms-list-items .current_courseware_ancestor > a {
+.single-lms_courseware .site-container ul.lms-list-items .current_courseware_ancestor > a {
 background:#f5f5f5;
 font-size:19px;
 }
 
-.site-container ul.lms-list-items li a .lms-item-complete:before {
+.single-lms_courseware .site-container ul.lms-list-items li a .lms-item-complete:before {
 content:' \f3fe';
 font-family:'ionicons';
 font-size:23px;
@@ -2436,25 +2450,25 @@ font-weight:700;
 float:left;
 }
 
-.site-container ul.lms-list-items li a .lms-item-favorite:before {
+.single-lms_courseware .site-container ul.lms-list-items li a .lms-item-favorite:before {
 color:#ffcc00;
 font-size:16px;
 margin-top:2px;
 font-weight:700;
 }
 
-.site-container .courseware_item span small,.entry-header small {
+.single-lms_courseware .site-container .courseware_item span small,.entry-header small {
 display:block;
 margin-bottom:10px;
 text-transform:uppercase;
 color:#5d5d5d;
 }
 
-.lms_courseware .entry-header small {
+.single-lms_courseware .lms_courseware .entry-header small {
 font-size:30px;
 }
 
-.site-container .courseware_item span small:hover {
+.single-lms_courseware .site-container .courseware_item span small:hover {
 color:#5d5d5d;
 }
 
@@ -2484,7 +2498,7 @@ display:none
 float:left
 }
 
-.site-container .rm-podcast footer {
+.post-type-archive-podcast .site-container .rm-podcast footer {
 margin-bottom:30px
 }
 
@@ -3073,6 +3087,14 @@ Media Queries
 	.essence .image-section .wrap section{
 		width: 100%;
 	}
+
+	.site-header .nav-primary {
+	opacity:1
+	}
+
+	.dark .nav-primary {
+	opacity:1
+	}
 }
 
 @media only screen and (max-width: 480px) {
@@ -3112,4 +3134,512 @@ Media Queries
 	    padding: 6% 5%;
 	}
 
+}
+
+
+/********************** Single Landing Page ***********************/
+
+
+
+.single-landing_page .site-container {
+    max-width: none;
+}
+
+.single-landing_page .site-header img {
+  max-width: 250px;
+}
+
+.single-landing_page .content {
+padding: 0 !important;
+}
+
+.single-landing_page .section {
+  padding: 5%;
+  margin-bottom: 0;
+}
+
+
+
+.single-landing_page .module {
+  margin-bottom: 0;
+}
+
+.single-landing_page .section-wrap {
+max-width:1000px;
+margin: 0 auto;
+}
+
+
+
+
+
+/********************** Fonts ***********************/
+
+.single-landing_page h3 {
+    font-size: 45px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/********************** Buttons ***********************/
+.single-landing_page button {
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 20px 40px;
+}
+
+/********************** Section Header ***********************/
+
+/* Site-Header*/
+
+.single-landing_page .site-header .wrap {
+    margin: 0 auto;
+    padding: 5px 0 400px;
+    position: relative;
+}
+.single-landing_page .site-header {
+  background: url(/wp-content/uploads/2016/05/SplitShireIMG8150v2-2.png) no-repeat center;
+  background-size: cover;
+  max-width: none;
+}
+
+.single-landing_page .site-title {
+text-transform:none;
+font-size:60px;
+padding: 100px 5%;
+margin-bottom:40px;
+line-height: 1.2;
+font-weight: 300;
+margin: 0 auto;
+letter-spacing: 0;
+
+}
+
+.single-landing_page .site-title a {
+color: #fff !important;
+}
+
+.single-landing_page .site-description {
+  font-size: 21px;
+  text-transform: uppercase;
+  color: #ffcc00;
+  font-weight: 600;
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+/********************** Section Bullet Lists ***********************/
+
+#section_bullets {
+  margin-bottom: 0;
+}
+
+#section_bullets .booklist {
+  margin: 20px 0 0;
+  padding-bottom: 0;
+}
+
+.single-landing_page  .booklist li {
+  padding: 10px 20px 40px 20px;
+  list-style: none;
+  position: relative;
+}
+
+
+
+#section_bullets .booklist li:last-child {
+  padding-bottom: 0;
+}
+
+
+#section_bullets  .booklist li:before {
+    content: ' \f3fe';
+    font-family: 'ionicons';
+    font-weight: bold;
+    color: #bbb;
+    padding-right: 5px;
+    font-size: 30px;
+    position: absolute;
+    left: -15px;
+    top: 5px;
+  }
+
+
+/********************** Section Copy Below Bullet Lists ***********************/
+
+#section_copy {
+  background-color: #333;
+  color: #ddd;
+  margin-bottom: 0;
+}
+
+/*#section_copy .module-wrap:before {
+    content: " ";
+    display: block;
+    border-top: 2px solid #ceb15b;
+    margin: 0px auto 40px;
+    width: 300px;
+}
+
+#section_copy .module-wrap:after {
+    content: " ";
+    display: block;
+    border-bottom: 2px solid #ceb15b;
+    margin: 40px auto 0;
+    width: 300px;
+}*/
+
+
+/********************** Section Introducing Essence ***********************/
+#section_introducing-essence {
+  background: #f5f5f5;
+  margin-bottom: 0;
+}
+
+#section_introducing-essence  h3 {
+
+}
+
+#section_introducing-essence ul {
+  clear: both;
+}
+
+#section_introducing-essence .booklist li {
+  padding: 10px 20px 40px 20px;
+  list-style: none;
+  position: relative;
+}
+
+
+#section_introducing-essence  .booklist li:before {
+    content: ' \f3fe';
+    font-family: 'ionicons';
+    color: #bbb;
+    font-weight: bold;
+    padding-right: 5px;
+    font-size: 30px;
+    position: absolute;
+    left: -15px;
+    top: 5px;
+  }
+
+
+/********************** Section Essence Do Testimonials ***********************/
+
+#section_essence-do {
+  background: #28272c;
+  color: rgba(255,255,255,0.6);
+}
+
+#section_essence-do h3 {
+  color: #ffcc00;
+}
+
+.sales-testimonial {
+  margin-bottom: 30px;
+}
+
+.sales-testimonial cite {
+  color: #ffcc00;
+  margin-left: 40px;
+}
+
+.sales-testimonial  blockquote {
+    color: #999;
+    margin: 40px 40px 0 40px;
+  }
+
+  .sales-testimonial br {
+    display: none;
+  }
+
+
+/********************** section features-section lessons ***********************/
+
+#section_lesson-headline {
+  padding: 4% 0 0;
+}
+#section_lesson-headline .module {
+  margin-bottom: 0;
+}
+
+#section_lesson-headline h3 {
+  margin-bottom: 20px;
+}
+
+#section_essence-cover {
+  padding-top: 0;
+}
+
+#section_essence-cover p {
+  font-size: 17px;
+}
+#section_essence-cover span {
+display: block;
+font-weight:bold;
+font-size:17px;
+color: #ffcc00;
+}
+
+#section_essence-cover  ul li {
+    padding: 20px 20px 30px 10px;
+}
+
+#section_essence-cover h4 {
+  padding: 10px 20px 10px 20px;
+  list-style: none;
+  position: relative;
+  margin-bottom: 0;
+}
+
+
+#section_essence-cover h4:before {
+    content: ' \f36b';
+    font-family: 'ionicons';
+    color: #ffcc00;
+    padding-right: 5px;
+    font-size: 30px;
+    position: absolute;
+    left: -10px;
+    top: 5px;
+  }
+
+/********************** section pricing ***********************/
+
+
+#section_onlie-study {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 5% 5% 0;
+}
+
+#section_pricing .pricing {
+
+}
+
+#section_pricing .pricing .name {
+    font-size: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#section_pricing .pricing span {
+    display: block;
+    font-size: 19px;
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
+#section_pricing .pricing .features p {
+    margin: 0;
+    padding: 10px 0 0 35px;
+    position: relative;
+    text-align: left;
+    font-size: 17px;
+}
+
+#section_pricing .popular-tag {
+    background: #999;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    position: relative;
+    text-align: center;
+    width: 90%;
+    z-index: 99;
+    top: -5px;
+    text-transform: uppercase;
+    border: 2px solid #666;
+}
+
+/********************** section faq ***********************/
+#section_faqs li {
+  list-style-type: none;
+    padding: 2% 10px;
+}
+
+/*#section_faqs li:nth-of-type(odd) {
+  clear: left;
+}*/
+
+.faq-essence .question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.faq-essence .answer {
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+
+/********************** section_limited-offer***********************/
+#section_limited-offer {
+  background: #333;
+}
+
+#section_limited-offer .one-half {
+padding: 2%;
+background: #28272c;
+color: rgba(255,255,255,0.6);
+}
+
+#section_limited-offer .one-half h3 {
+  color: #ffcc00;
+}
+#section_limited-offer .one-half + .one-half {
+  background:#fff;
+  color:  #28272c;
+}
+
+#section_limited-offer .one-half + .one-half h3 {
+  color: #28272c
+}
+
+.button-expire {
+  background-color: #ddd;
+  border: 2px solid #bbb;
+  margin: -50px auto 0;
+  display: block
+}
+
+#section_limited-offer .booklist  {
+  margin: 20px 0 0 30px;
+  padding: 0 10px 20px;
+}
+
+#section_limited-offer  .booklist li {
+  padding: 5px 20px 40px 10px;
+}
+
+
+/********************** section_mentor-program ***********************/
+
+#section_mentor-program {
+  background: #28272c;
+  color: rgba(255,255,255,0.6);
+}
+
+#section_mentor-program h3 {
+  color: #ffcc00;
+}
+
+#section_mentor-program  .booklist  {
+  margin: 20px 0 0 30px;
+}
+
+#section_mentor-program  .booklist li {
+  padding: 5px 20px 40px 10px;
+}
+
+
+/*#section_mentor-program  .module-wrap:after {
+    content: " ";
+    display: block;
+    border-bottom: 2px solid #ceb15b;
+    margin: 40px auto 0;
+    width: 300px;
+}*/
+
+
+/********************** section_money-back***********************/
+#section_money-back {
+  background: #ffcc00;
+  color: #333;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#section_money-back h3 {
+  color: #333;
+}
+
+#section_money-back img.alignright {
+    margin: 0 0 0 24px;
+}
+
+
+/********************** section_testimonials-bottom ***********************/
+
+#section_testimonials-bottom {
+  font-size: 19px;
+  background: #28272c;
+  margin-bottom: 0;
+}
+
+
+
+
+/********************** section_time-transformed ***********************/
+#section_time-transformed {
+  background: #f5f5f5;
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+
+}
+
+#section_time-transformed h3 {
+  color: #28272c;
+}
+
+#section_time-transformed p {
+  color: #28272c;
+}
+
+
+/* Media Queries */
+
+
+@media only screen and (max-width: 768px) {
+  #section_faqs li {
+    float: none;
+    width: 100%;
+  }
+  .single-landing_page .booklist li:before {
+    left: -15px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+	.section-wrap {
+		max-width: 100%;
+    padding: 0 5%;
+	}
+
+  .single-landing_page h3 {
+      font-size: 30px;
+      text-align: center;
+  }
+
+  .single-landing_page .site-title {
+    text-transform:none;
+    font-size:40px;
+  }
+
+  .single-landing_page .site-description {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+	.section-wrap {
+		max-width: 768px;
+	}
+
+  .single-landing_page .booklist li {
+      margin-left: 0;
+      margin-bottom: 0;
+  }
+
+
+}
+
+@media only screen and (max-width: 1200px) {
+	.section-wrap {
+		max-width: 960px;
+	}
 }
