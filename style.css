@@ -1714,7 +1714,7 @@ Content Area
 	max-width: 100px;
 }
 .front-page .featured-content .entry {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .featured-content .entry-title{
@@ -2365,7 +2365,8 @@ Site Footer
 /*
 Podcast Archive Page
 ---------------------------------------------------------------------------------------------------- */
-.podcast-archive-link {
+.podcast-archive-link,
+.more-from-category  {
 	padding: 5px 20px;
 	margin-top: 0;
 	border: 1px solid #bbb;
@@ -2377,11 +2378,20 @@ Podcast Archive Page
 	font-size: 16px;
 }
 
-.podcast-archive-link:hover {
+.podcast-archive-link:hover,
+.more-from-category:hover  {
 	border: 1px solid #ffcc00;
 	border-radius: 3px;
 	color: #34313b;
 	background-color: #ffcc00;
+}
+
+.more-from-category a {
+color:#fff
+}
+
+.more-from-category a:hover {
+color:#000
 }
 
 .archive .entry,
@@ -2471,6 +2481,25 @@ font-size:30px;
 
 .single-lms_courseware .site-container .courseware_item span small:hover {
 color:#5d5d5d;
+}
+
+/* Sales LMS Landing Pages */
+
+.sales-lms #menu-brett,.sales-lms .nav-footer {
+display:none
+}
+
+.sales-lms .title-area {
+width:100%;
+text-align:center
+}
+
+.sales-lms .site-inner,.sales-lms .entry-header {
+text-align:center
+}
+
+.sales-lms .wp-video {
+margin:0 auto
 }
 
 /*
@@ -3067,7 +3096,7 @@ Media Queries
 	}
 
 	.front-page-1 .enews-widget {
-	    width: 100%;
+		width: 100%;
 	}
 
 	.front-page-1  .widget:first-of-type {
@@ -3079,11 +3108,25 @@ Media Queries
 	}
 
 	.site-header .nav-primary {
-	opacity:1
+		opacity:1
 	}
 
 	.dark .nav-primary {
-	opacity:1
+		opacity:1
+	}
+}
+
+@media only screen and (max-width: 540px) {
+
+	.premise-checkout-wrap .accesspress-checkout-form-payment-method {
+		width:100%
+	}
+	.home .solid-section .widget {
+		padding:40px 5px
+	}
+
+	.home .featured-content a.alignleft {
+		margin:0 24px 100px 0
 	}
 }
 
@@ -3624,21 +3667,26 @@ color: rgba(255,255,255,0.6);
 		max-width: 768px;
 	}
 
-  .single-landing_page .booklist li {
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-
-	.home .site-header {
-		position:fixed
+	.single-landing_page .booklist li {
+		margin-left: 0;
+		margin-bottom: 0;
 	}
 
-.front-page .site-header {
+	.home .site-header {
+		position:fixed;
+	}
+
+
+	.front-page .site-header {
 		background-color:transparent
 	}
 
-.front-page .site-header.dark {
+	.front-page .site-header.dark {
 		background-color:#fff
+	}
+
+	.site-header {
+		position:relative
 	}
 
 }
