@@ -2502,6 +2502,39 @@ text-align:center
 margin:0 auto
 }
 
+/* Hide Course Menu Non-logged in Users*/
+
+.postid-4123 .lms-list-items,
+.postid-5210 .lms-list-items {
+display:none
+}
+
+/* Show Course Menu Non-logged in Users*/
+
+.logged-in .lms-list-items {
+display:block
+}
+
+/* Sticky footer Non-logged in Users*/
+
+.single-lms_courseware .site-container {
+min-height:100%;
+display:flex;
+flex-direction:column;
+height:100vh
+}
+
+.single-lms_courseware .site-inner {
+flex:1
+}
+
+/* Normal footer logged in Users*/
+
+.logged-in .site-container {
+min-height:100%;
+display:block!important
+}
+
 /*
 Lead Page
 ---------------------------------------------------------------------------------------------------- */
